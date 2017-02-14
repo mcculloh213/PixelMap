@@ -2,6 +2,7 @@
     <string name="app_name">Proton Echoes</string>
     <string name="action_settings">Settings</string>
     <string name="button_erase">Erase</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="line_imageview_description">Display of line thickness</string>
     <string name="label_alpha">Alpha</string>
     <string name="label_red">Red</string>
@@ -15,6 +16,7 @@
     <string name="message_error_saving">Error: Drawing not saved.</string>
     <string name="message_saved">Drawing saved!</string>
     <string name="permission_explanation">App must receive permissions to save to device storage.</string>
+    <string name="request_permission">This sample needs camera permission.</string>
     <string name="title_colour_dialog">Choose Color</string>
     <string name="title_line_width_dialog">Set Line Width</string>
 </resources>

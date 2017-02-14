@@ -86,7 +86,7 @@ public class MainActivityFragment extends Fragment {
         fgt.show(getFragmentManager(), "Erase Dialog");
     }
 
-    private void sameImage() {
+    private void saveImage() {
         if (getContext().checkSelfPermission(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {

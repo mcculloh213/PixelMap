@@ -13,19 +13,26 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Main Activity using activity_main.xml layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (null == savedInstanceState) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.container, CameraPreview.newInstance())
+                    .commit();
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Determine screen size
-        int screenSize = getResources().getConfiguration().screenLayout &
-                Configuration.SCREENLAYOUT_SIZE_MASK;
-
-        // Set landscape mode for tablet, otherwise portrait mode
-        if (screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        } else {
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        }
+//        // Determine screen size
+//        int screenSize = getResources().getConfiguration().screenLayout &
+//                Configuration.SCREENLAYOUT_SIZE_MASK;
+//
+//        // Set landscape mode for tablet, otherwise portrait mode
+//        if (screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+//        } else {
+//            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        }
 
     }
 

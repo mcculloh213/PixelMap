@@ -21,6 +21,26 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            tools:context="null_pointer.dalton.drawingtool.CameraPreview" />
+
+        <include layout="@layout/content_main" />
+
+
+    </FrameLayout>
+
+
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

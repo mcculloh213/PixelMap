@@ -41,6 +41,8 @@ public class DrawingView extends View {
 
         paintScreen = new Paint(); // Initialize bitmap
 
+        paintScreen.setAlpha(255); // Completely transparent
+
         /**
          * Default settings:
          *     Anti Alias: true
@@ -61,7 +63,7 @@ public class DrawingView extends View {
     public void onSizeChanged(int w, int h, int oldW, int oldH) {
         bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
         bitmapCanvas = new Canvas(bitmap);
-        bitmap.eraseColor(Color.WHITE);
+        bitmap.eraseColor(Color.TRANSPARENT);
     }
 
     @Override
