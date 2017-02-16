@@ -99,7 +99,7 @@ public class LineWidthDialogFragment extends DialogFragment {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             Paint p = new Paint();
-            p.setColor(getMAFragment().getDrawingView().getDrawingColour());
+            p.setColor(getMAFragment().getDrawingView().getDrawingColor());
             p.setStrokeCap(Paint.Cap.ROUND);
             p.setStrokeWidth(progress);
 

@@ -35,16 +35,20 @@ public class DrawingView extends View {
     private final Map<Integer, Path> pathMap = new HashMap<>();
     private final Map<Integer, Point> previousPointMap = new HashMap<>();
 
+    private boolean eraserOn = false;
+
     // CONSTRUCTOR
     public DrawingView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         paintScreen = new Paint(); // Initialize bitmap
 
+        paintScreen.setAlpha(255); // Completely transparent
+
         /**
          * Default settings:
          *     Anti Alias: true
-         *     Colour: Black
+         *     Color: Black
          *     Style: Stroke
          *     Stroke Width: 5
          *     Stroke Cap: Round
@@ -61,7 +65,7 @@ public class DrawingView extends View {
     public void onSizeChanged(int w, int h, int oldW, int oldH) {
         bitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
         bitmapCanvas = new Canvas(bitmap);
-        bitmap.eraseColor(Color.WHITE);
+        bitmap.eraseColor(Color.TRANSPARENT);
     }
 
     @Override
@@ -183,18 +187,26 @@ public class DrawingView extends View {
         }
     }
 
+    public void erase() {
+
+    }
+
+    public void undo() {
+
+    }
+
     public void clear() {
         pathMap.clear(); // Empty paths
         previousPointMap.clear(); // Empty previous points
-        bitmap.eraseColor(Color.WHITE);
+        bitmap.eraseColor(Color.TRANSPARENT);
         invalidate(); // Refresh
     }
 
-    public void setDrawingColour(int colour) {
-        paintLine.setColor(colour);
+    public void setDrawingColor(int color) {
+        paintLine.setColor(color);
     }
 
-    public int getDrawingColour() {
+    public int getDrawingColor() {
         return paintLine.getColor();
     }
 

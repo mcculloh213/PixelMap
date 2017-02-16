@@ -86,7 +86,7 @@ public class MainActivityFragment extends Fragment {
         fgt.show(getFragmentManager(), "Erase Dialog");
     }
 
-    private void sameImage() {
+    private void saveImage() {
         if (getContext().checkSelfPermission(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             if (shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
@@ -139,9 +139,9 @@ public class MainActivityFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.colour:
-                ColourDialogFragment cd = new ColourDialogFragment();
-                cd.show(getFragmentManager(), "Colour Dialog");
+            case R.id.color:
+                ColorDialogFragment cd = new ColorDialogFragment();
+                cd.show(getFragmentManager(), "Color Dialog");
                 return true;
             case R.id.line_width:
                 LineWidthDialogFragment lwd = new LineWidthDialogFragment();
