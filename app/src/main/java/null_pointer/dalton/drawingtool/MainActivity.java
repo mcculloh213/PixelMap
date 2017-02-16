@@ -1,7 +1,5 @@
 package null_pointer.dalton.drawingtool;
 
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -45,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                // Get layout params of current FAB
                 if (menuHidden) {
                     showActionBar();
                 } else {
@@ -72,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 mActionBar.hide();
-                                mParams.setMargins((int) getResources().getDimension(R.dimen.fab_margin),
+                                mParams.setMargins(
+                                        (int) getResources().getDimension(R.dimen.fab_margin),
                                         (int) getResources().getDimension(R.dimen.fab_margin),
                                         (int) getResources().getDimension(R.dimen.fab_margin),
                                         (int) getResources().getDimension(R.dimen.fab_margin));
@@ -90,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
         if (mActionBar != null) {
             mActionBar.show();
             if (mToolbar != null) {
-                mParams.setMargins((int) getResources().getDimension(R.dimen.fab_margin),
+                mParams.setMargins(
+                        (int) getResources().getDimension(R.dimen.fab_margin),
                         (int) getResources().getDimension(R.dimen.fab_margin),
                         (int) getResources().getDimension(R.dimen.fab_margin),
                         (int) getResources().getDimension(R.dimen.fab_high_margin));
