@@ -4,11 +4,17 @@
     <string name="button_erase">Erase</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="line_imageview_description">Display of line thickness</string>
-    <string name="label_alpha">Alpha</string>
-    <string name="label_red">Red</string>
-    <string name="label_blue">Blue</string>
-    <string name="label_green">Green</string>
-    <string name="menuitem_colour">Color</string>
+    <string name="label_alpha">Alpha:</string>
+    <string name="label_red">Red:</string>
+    <string name="label_orange">Orange:</string>
+    <string name="label_yellow">Yellow:</string>
+    <string name="label_green">Green:</string>
+    <string name="label_blue">Blue:</string>
+    <string name="label_indigo">Indigo:</string>
+    <string name="label_violet">Violet:</string>
+    <string name="label_white">White:</string>
+    <string name="label_black">Black:</string>
+    <string name="menuitem_color">Color</string>
     <string name="menuitem_delete">Clear</string>
     <string name="menuitem_line_width">Line Width</string>
     <string name="menuitem_save">Save</string>
@@ -17,6 +23,7 @@
     <string name="message_saved">Drawing saved!</string>
     <string name="permission_explanation">App must receive permissions to save to device storage.</string>
     <string name="request_permission">This sample needs camera permission.</string>
-    <string name="title_colour_dialog">Choose Color</string>
+    <string name="title_color_dialog">Choose Color</string>
     <string name="title_line_width_dialog">Set Line Width</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
